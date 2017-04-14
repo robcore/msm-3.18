@@ -96,3 +96,14 @@ x509.genkey
 
 # Kconfig presets
 all.config
+
+#
+# Leavings from patching
+#
+*.rej
+*.patch
+
+#
+# Build directory
+#
+build/
