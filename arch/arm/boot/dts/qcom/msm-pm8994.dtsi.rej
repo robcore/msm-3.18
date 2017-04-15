@@ -1,0 +1,10 @@
+diff a/arch/arm/boot/dts/qcom/msm-pm8994.dtsi b/arch/arm/boot/dts/qcom/msm-pm8994.dtsi	(rejected hunks)
+@@ -356,7 +356,7 @@
+ 		#address-cells = <2>;
+ 		#size-cells = <0>;
+ 
+-		pwm@b100 {
++		pm8994_pwm_1: pwm@b100 {
+ 			compatible = "qcom,qpnp-pwm";
+ 			reg = <0xb100 0x100>,
+ 			      <0xb042 0x7e>;
