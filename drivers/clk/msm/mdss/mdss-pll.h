@@ -30,7 +30,9 @@
 
 enum {
 	MDSS_DSI_PLL_LPM,
+	MDSS_DSI_PLL_20NM,
 	MDSS_DSI_PLL_8996,
+	MDSS_HDMI_PLL_20NM,
 	MDSS_HDMI_PLL_8996,
 	MDSS_HDMI_PLL_8996_V2,
 	MDSS_HDMI_PLL_8996_V3,
@@ -40,6 +42,8 @@ enum {
 
 enum {
 	MDSS_PLL_TARGET_8996,
+	MDSS_PLL_TARGET_8994,
+	MDSS_PLL_TARGET_8992,
 	MDSS_PLL_TARGET_8952,
 	MDSS_PLL_TARGET_8937,
 	MDSS_PLL_TARGET_8953,
@@ -82,6 +86,7 @@ struct mdss_pll_resources {
 	 * register mapping
 	 */
 	void __iomem	*pll_base;
+	void __iomem	*pll_1_base;
 	void __iomem	*phy_base;
 	void __iomem	*gdsc_base;
 	void __iomem	*dyn_pll_base;
@@ -123,6 +128,12 @@ struct mdss_pll_resources {
 	 * status for them to turn on/off after set rate success.
 	 */
 	bool		pll_on;
+
+	/*
+	 * Certain plls' have to change the vco freq range to support
+	 * 90 phase difference between bit and byte clock frequency.
+	 */
+	bool		pll_en_90_phase;
 
 	/*
 	 * handoff_status is true of pll is already enabled by bootloader with
