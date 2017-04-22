@@ -1309,5 +1309,20 @@
 			};
 		};
 
+		eth-irq {
+			eth_irq_default: default {
+				mux {
+					pins = "gpio75";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio75";
+					drive-strength = <2>;
+					bias-pull-up;
+				}
+			};
+		};
+
 	};
 };
