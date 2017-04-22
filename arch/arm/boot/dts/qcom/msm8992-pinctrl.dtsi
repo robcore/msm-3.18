@@ -1190,5 +1190,96 @@
 				};
 			};
 		};
+
+		pmx_fm_int_active {
+			fm_int_active: fm_int_active {
+				mux {
+					pins = "gpio9";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio9";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+		};
+
+		pmx_fm_int_suspend {
+			fm_int_suspend: fm_int_suspend {
+				mux {
+					pins = "gpio9";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio9";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+		};
+
+		pmx_fm_status_int_active {
+			fm_status_int_active: fm_status_int_active {
+				mux {
+					pins = "gpio11";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio11";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+		};
+
+		pmx_fm_status_int_suspend {
+			fm_status_int_suspend: fm_status_int_suspend {
+				mux {
+					pins = "gpio11";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio11";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+		};
+
+		pmx_fm_rst_active {
+			fm_rst_active: fm_rst_active {
+				mux {
+					pins = "gpio62";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio62";
+					drive-strength = <16>;
+					bias-pull-down;
+				};
+			};
+		};
+
+		pmx_fm_rst_suspend {
+			fm_rst_suspend: fm_rst_suspend {
+				mux {
+					pins = "gpio62";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio62";
+					drive-strength = <16>;
+					bias-pull-down;
+				};
+			};
+		};
+
 	};
 };
