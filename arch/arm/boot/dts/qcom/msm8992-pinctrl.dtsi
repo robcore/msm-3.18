@@ -1324,5 +1324,19 @@
 			};
 		};
 
+		spi0-unused-cs {
+			spi0_unused_cs_default: default {
+				mux {
+					pins = "gpio8", "gpio10", "gpio11";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio8", "gpio10", "gpio11";
+					drive-strength = <2>;
+					bias-pull-up;
+				};
+			};
+		};
 	};
 };
