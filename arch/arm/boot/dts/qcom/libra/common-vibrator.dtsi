@@ -10,21 +10,32 @@
  * GNU General Public License for more details.
  */
 
-&tlmm_pinmux {
+&msm_gpio {
 	pmx_vibrator {
-		qcom,pins = <&gp 21>;
-		qcom,pin-func = <0>;
-		qcom,num-grp-pins = <1>;
-		label = "pmx_vibrator";
-
 		vibrator_pin_active: vibrator_pin_active {
-			drive-strength = <8>;
-			bias-pull-up;
+			mux {
+				pins = "gpio21";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio21";
+				drive-strength = <8>;
+				bias-pull-up;
+			};
 		};
 
 		vibrator_pin_suspend: vibrator_pin_suspend {
-			drive-strength = <2>;
-			bias-disable;
+			mux {
+				pins = "gpio21";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio21";
+				drive-strength = <2>;
+				bias-disable;
+			};
 		};
 	};
 };

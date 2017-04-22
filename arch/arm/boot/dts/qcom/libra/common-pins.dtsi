@@ -10,7 +10,7 @@
  * GNU General Public License for more details.
  */
 
-&tlmm_pinmux {
+&msm_gpio {
     /delete-node/ tpiu_seta_14;
     /delete-node/ tpiu_seta_15;
     /delete-node/ tpiu_seta_16;

@@ -10,9 +10,23 @@
  * GNU General Public License for more details.
  */
 
-&tlmm_pinmux {
-	pmx_ts {
-		qcom,pins = <&gp 60>, <&gp 61>, <&gp 96>, <&gp 110>;
+&ts_active {
+	mux {
+		pins = "gpio60", "gpio61", "gpio96", "gpio110";
+	};
+
+	config {
+		pins = "gpio60", "gpio61", "gpio96", "gpio110";
+	};
+};
+
+&ts_suspend {
+	mux {
+		pins = "gpio60", "gpio61", "gpio96", "gpio110";
+	};
+
+	config {
+		pins = "gpio60", "gpio61", "gpio96", "gpio110";
 	};
 };
 

@@ -41,11 +41,6 @@
 	qcom,mdss-pref-prim-intf = "dsi";
 };
 
-&pmx_mdss {
-	qcom,num-grp-pins = <1>;
-	qcom,pins = <&gp 78>;
-};
-
 &mdss_dsi0 {
 	qcom,dsi-pref-prim-pan = <&dsi_dual_sharp_video_0>;
 	pinctrl-names = "mdss_default", "mdss_sleep";
@@ -89,21 +84,6 @@
 &labibb {
 	status = "ok";
 	qpnp,qpnp-labibb-mode = "lcd";
-};
-
-&pmx_hdmi_cec {
-	qcom,num-grp-pins = <1>;
-	qcom,pins = <&gp 31>;
-};
-
-&pmx_hdmi_ddc {
-	qcom,num-grp-pins = <2>;
-	qcom,pins = <&gp 32>, <&gp 33>;
-};
-
-&pmx_hdmi_hpd {
-	qcom,num-grp-pins = <1>;
-	qcom,pins = <&gp 34>;
 };
 
 &mdss_hdmi_tx {

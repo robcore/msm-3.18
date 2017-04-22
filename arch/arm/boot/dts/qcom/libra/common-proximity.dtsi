@@ -16,33 +16,48 @@
 	};
 };
 
-&tlmm_pinmux {
+&msm_gpio {
 	pmx_i2c_7 {
-		qcom,pins = <&gp 43>, <&gp 44>; /* SDA, SCL */
-		qcom,num-grp-pins = <2>;
-		qcom,pin-func = <3>;
-		label = "pmx_i2c_7";
-
 		i2c_7_active: i2c_7_active {
-			drive-strength = <2>;
-			bias-disable;
+			mux {
+				pins = "gpio43", "gpio44";
+				function = "blsp_i2c7";
+			};
+
+			config {
+				pins = "gpio43", "gpio44";
+				drive-strength = <2>;
+				bias-disable;
+			};
 		};
 
 		i2c_7_sleep: i2c_7_sleep {
-			drive-strength = <2>;
-			bias-disable;
+			mux {
+				pins = "gpio43", "gpio44";
+				function = "blsp_i2c7";
+			};
+
+			config {
+				pins = "gpio43", "gpio44";
+				drive-strength = <2>;
+				bias-disable;
+			};
 		};
 	};
 
 	cm36686_int_pin {
-		qcom,pins = <&gp 40>;
-		qcom,num-grp-pins = <1>;
-		qcom,pin-func = <0>;
-		label = "cm36686-irq";
 		cm36686_int_default: cm36686_int_default {
-			bias-pull-up;
-			input-enable;
-			drive-strength = <2>;
+			mux {
+				pins = "gpio40";
+				function = "gpio";
+			};
+
+			config {
+				pins = "gpio40";
+				bias-pull-up;
+				input-enable;
+				drive-strength = <2>;
+			};
 		};
 	};
 };

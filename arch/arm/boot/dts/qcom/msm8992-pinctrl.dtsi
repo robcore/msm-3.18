@@ -109,7 +109,7 @@
 					function = "mdp_vsync";
 				};
 
-				config: {
+				config {
 					pins = "gpio10";
 					drive-strength = <2>; /* 2 mA */
 					bias-pull-down = <0>; /* pull down*/
@@ -123,7 +123,7 @@
 					function = "mdp_vsync";
 				};
 
-				config: {
+				config {
 					pins = "gpio10";
 					drive-strength = <2>; /* 2 mA */
 					bias-pull-down; /* pull down */
@@ -139,7 +139,7 @@
 					function = "hdmi_cec";
 				};
 
-				config: {
+				config {
 					pins = "gpio31";
 					drive-strength = <2>;
 					bias-pull-up;
@@ -151,7 +151,7 @@
 					function = "hdmi_cec";					
 				};
 
-				config: {
+				config {
 					pins = "gpio31";
 					drive-strength = <2>;
 					bias-pull-down;
@@ -163,7 +163,7 @@
 			mdss_hdmi_ddc_active: ddc_active {
 				mux {
 					pins = "gpio32", "gpio33";
-					function: "hdmi_ddc";
+					function = "hdmi_ddc";
 				};
 
 				config {
@@ -175,10 +175,10 @@
 			mdss_hdmi_ddc_suspend: ddc_suspend {
 				mux {
 					pins = "gpio32", "gpio33";
-					function: "hdmi_ddc";
+					function = "hdmi_ddc";
 				};
 
-				config: {
+				config {
 					pins = "gpio32", "gpio33";
 					drive-strength = <2>;
 					bias-pull-down;
@@ -326,7 +326,7 @@
 					pins = "sdc2_data";
 					bias-pull-up; /* pull up */
 					drive-strength = <2>; /* 2 MA */
-				}
+				};
 			};
 		};
 
@@ -847,7 +847,7 @@
 					pins = "gpio25";
 					drive-strength = <16>;
 					bias-disable;
-				}
+				};
 			};
 		};
 
@@ -1285,7 +1285,7 @@
 			ts_active: ts_active {
 				mux {
 					pins = "gpio60", "gpio61";
-					function = "gpio"l
+					function = "gpio";
 				};
 
 				config {
@@ -1298,7 +1298,7 @@
 			ts_suspend: ts_suspend {
 				mux {
 					pins = "gpio60", "gpio61";
-					function = "gpio"l
+					function = "gpio";
 				};
 
 				config {
@@ -1320,7 +1320,7 @@
 					pins = "gpio75";
 					drive-strength = <2>;
 					bias-pull-up;
-				}
+				};
 			};
 		};
 
@@ -1395,10 +1395,6 @@
 		};
 
 		pmx_pri_mi2s {
-			qcom,pins = <&gp 65>, <&gp 66>;
-			qcom,num-grp-pins = <2>;
-			qcom,pin-func = <1>;
-			label = "pri_mi2s";
 			pri_mi2s_sleep: pri_mi2s_sleep {
 				mux {
 					pins = "gpio65", "gpio66";
@@ -1548,7 +1544,7 @@
 				mux {
 					pins = "gpio91", "gpio92";
 					function = "gpio";
-				}
+				};
 
 				config {
 					pins = "gpio91", "gpio92";
@@ -1563,7 +1559,7 @@
 				mux {
 					pins = "gpio92", "gpio91";
 					function = "gpio";
-				}
+				};
 
 				config {
 					pins = "gpio92", "gpio91";
