@@ -187,7 +187,6 @@
 		};
 
 		pmx_hdmi_hpd: pmx_hdmi_hpd {
-			qcom,pin-func = <1>;
 			mdss_hdmi_hpd_active: hpd_active {
 				mux {
 					pins = "gpio34";
@@ -328,6 +327,35 @@
 					bias-pull-up; /* pull up */
 					drive-strength = <2>; /* 2 MA */
 				}
+			};
+		};
+
+		pmx_i2c_6 {
+			i2c_6_active: i2c_6_active {
+				mux {
+					pins = "gpio27", "gpio28";
+					function = "blsp_i2c6";
+				};
+
+				config {
+					pins = "gpio27", "gpio28";
+					drive-strength = <2>;
+					bias-disable;
+				};
+
+			};
+
+			i2c_6_sleep: i2c_6_sleep {
+				mux {
+					pins = "gpio27", "gpio28";
+					function = "blsp_i2c6";
+				};
+
+				config {
+					pins = "gpio27", "gpio28";
+					drive-strength = <2>;
+					bias-disable;
+				};
 			};
 		};
 	};
