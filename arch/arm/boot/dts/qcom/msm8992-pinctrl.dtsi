@@ -1281,5 +1281,33 @@
 			};
 		};
 
+		pmx_ts {
+			ts_active: ts_active {
+				mux {
+					pins = "gpio60", "gpio61";
+					function = "gpio"l
+				};
+
+				config {
+					pins = "gpio60", "gpio61";
+					drive-strength = <16>;
+					bias-pull-up;
+				};
+			};
+
+			ts_suspend: ts_suspend {
+				mux {
+					pins = "gpio60", "gpio61";
+					function = "gpio"l
+				};
+
+				config {
+					pins = "gpio60", "gpio61";
+					drive-strength = <16>;
+					bias-disable;
+				};
+			};
+		};
+
 	};
 };
