@@ -1119,5 +1119,20 @@
 				};
 			};
 		};
+
+		cnss_pins {
+			cnss_default: default {
+				mux {
+					pins = "gpio112", "gpio54", "gpio53", "gpio113";
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio112", "gpio54", "gpio53", "gpio113";
+					drive-strength = <16>;
+					bias-pull-down;
+				};
+			};
+		};
 	};
 };
