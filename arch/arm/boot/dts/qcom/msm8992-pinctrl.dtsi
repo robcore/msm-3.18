@@ -46,5 +46,29 @@
 				};
 			};
 		};
+
+		hsuart_active: default {
+			mux {
+				pins = "gpio45", "gpio46", "gpio47", "gpio48";
+				function = "blsp_uart8";
+			};
+			config {
+				pins = "gpio45", "gpio46", "gpio47", "gpio48";
+				drive-strength = <16>;
+				bias-disable;
+			};
+		};
+
+		hsuart_sleep: sleep {
+			mux {
+				pins = "gpio45", "gpio46", "gpio47", "gpio48";
+				function = "gpio";
+			};
+			config {
+				pins = "gpio45", "gpio46", "gpio47", "gpio48";
+				drive-strength = <2>;
+				bias-disable;
+			};
+		};
 	};
 };
