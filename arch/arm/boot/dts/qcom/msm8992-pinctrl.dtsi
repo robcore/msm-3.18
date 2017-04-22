@@ -1001,5 +1001,65 @@
 				};
 			};
 		};
+
+		spi0_active {
+			spi0_default: default {
+				mux {
+					pins = "gpio0", "gpio1", "gpio3"; /* MOSI, MISO, CLK */
+					function = "blsp_spi1";
+				};
+
+				config {
+					pins = "gpio0", "gpio1", "gpio3"; /* MOSI, MISO, CLK */
+					drive-strength = <12>; /* 12 MA */
+					bias-disable = <0>; /* No PULL */
+				};
+			};
+		};
+
+		spi0_suspend {
+			spi0_sleep: sleep {
+				mux {
+					pins = "gpio0", "gpio1", "gpio3"; /* MOSI, MISO, CLK */
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio0", "gpio1", "gpio3"; /* MOSI, MISO, CLK */
+					drive-strength = <2>; /* 2 MA */
+					bias-pull-down; /* pull down */
+				};
+			};
+		};
+
+		spi0_cs2_active {
+			spi0_cs2_active: cs2_active {
+				mux {
+					pins = "gpio9"; /* CS */
+					function = "blsp_spi1_cs2";
+				};
+
+				config {
+					pins = "gpio9"; /* CS */
+					drive-strength = <2>;
+					bias-disable = <0>;
+				};
+			};
+		};
+
+		spi0_cs2_suspend {
+			spi0_cs2_sleep: cs2_sleep {
+				mux {
+					pins = "gpio9"; /* CS */
+					function = "gpio";
+				};
+
+				config {
+					pins = "gpio9"; /* CS */
+					drive-strength = <2>;
+					bias-disable = <0>;
+				};
+			};
+		};
 	};
 };
