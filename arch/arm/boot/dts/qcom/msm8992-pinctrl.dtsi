@@ -985,5 +985,21 @@
 				};
 			};
 		};
+
+		wcd9xxx_intr {
+			wcd_intr_default: default {
+				mux {
+					pins = "gpio72";
+					function = "spkr_i2s";
+				};
+
+				config {
+					pins = "gpio72";
+					drive-strength = <2>; /* 2 MA */
+					bias-pull-down; /* pull down */
+					input-enable;
+				};
+			};
+		};
 	};
 };
