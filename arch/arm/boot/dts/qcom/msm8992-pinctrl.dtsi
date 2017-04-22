@@ -955,5 +955,35 @@
 				};
 			};
 		};
+
+		cti_trigout_a {
+			trigout_a: trigout_a {
+				mux {
+					pins = "gpio56";
+					function = "qdss_cti_trig_out_a";
+				};
+
+				config {
+					pins = "gpio56";
+					drive-strength = <2>;
+					bias-disable;
+				};
+			};
+		};
+
+		cti_trigout_c {
+			trigout_c: trigout_c {
+				mux {
+					pins = "gpio41";
+					function = "qdss_cti_trig_out_c";
+				};
+
+				config {
+					pins = "gpio41";
+					drive-strength = <2>;
+					bias-disable;
+				};
+			};
+		};
 	};
 };
