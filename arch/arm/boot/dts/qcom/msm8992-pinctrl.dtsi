@@ -1338,5 +1338,119 @@
 				};
 			};
 		};
+
+		pmx_sec_aux_pcm {
+			sec_aux_pcm_sleep: sec_aux_pcm_sleep {
+				mux {
+					pins = "gpio79", "gpio80", "gpio82";
+					function = "sec_mi2s";
+				};
+
+				config {
+					pins = "gpio79", "gpio80", "gpio82";
+					drive-strength = <2>;	/* 2 mA */
+					bias-pull-down;		/* PULL DOWN */
+				};
+			};
+			sec_aux_pcm_active: sec_aux_pcm_active {
+				mux {
+					pins = "gpio79", "gpio80", "gpio82";
+					function = "sec_mi2s";
+				};
+
+				config {
+					pins = "gpio79", "gpio80", "gpio82";
+					drive-strength = <8>;	/* 8 mA */
+					bias-disable;		/* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		pmx_sec_aux_pcm_din {
+			sec_aux_pcm_din_sleep: sec_aux_pcm_din_sleep {
+				mux {
+					pins = "gpio81";
+					function = "sec_mi2s";
+				};
+
+				config {
+					pins = "gpio81";
+					drive-strength = <2>;	/* 2 mA */
+					bias-pull-down;		/* PULL DOWN */
+				};
+			};
+			sec_aux_pcm_din_active: sec_aux_pcm_din_active {
+				mux {
+					pins = "gpio81";
+					function = "sec_mi2s";
+				};
+
+				config {
+					pins = "gpio81";
+					drive-strength = <8>;	/* 8 mA */
+					bias-disable;		/* NO PULL */
+				};
+			};
+		};
+
+		pmx_pri_mi2s {
+			qcom,pins = <&gp 65>, <&gp 66>;
+			qcom,num-grp-pins = <2>;
+			qcom,pin-func = <1>;
+			label = "pri_mi2s";
+			pri_mi2s_sleep: pri_mi2s_sleep {
+				mux {
+					pins = "gpio65", "gpio66";
+					function = "pri_mi2s";
+				};
+
+				config {
+					pins = "gpio65", "gpio66";
+					drive-strength = <2>;	/* 2 mA */
+					bias-pull-down;		/* PULL DOWN */
+				};
+			};
+			pri_mi2s_active: pri_mi2s_active {
+				mux {
+					pins = "gpio65", "gpio66";
+					function = "pri_mi2s";
+				};
+
+				config {
+					pins = "gpio65", "gpio66";
+					drive-strength = <2>;	/* 2 mA */
+					bias-disable;		/* NO PULL */
+					output-high;
+				};
+			};
+		};
+
+		pmx_pri_mi2s_sd0 {
+			pri_mi2s_sd0_sleep: pri_mi2s_sd0_sleep {
+				mux {
+					pins = "gpio67";
+					function = "pri_mi2s";
+				};
+
+				config {
+					pins = "gpio67";
+					drive-strength = <2>;	/* 2 mA */
+					bias-pull-down;		/* PULL DOWN */
+				};
+			};
+			pri_mi2s_sd0_active: pri_mi2s_sd0_active {
+				mux {
+					pins = "gpio67";
+					function = "pri_mi2s";
+				};
+
+				config {
+					pins = "gpio67";
+					drive-strength = <2>;	/* 2 mA */
+					bias-disable;		/* NO PULL */
+				};
+			};
+		};
 	};
 };
